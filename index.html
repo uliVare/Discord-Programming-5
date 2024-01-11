@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gestion Financiera</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Gestion Financiera</h2>
+      <input type="number" id="income" min="0" placeholder="Ingresos Totales" />
+      <button onclick="addIncome()">Registrar Ingresos</button>
+      <div class="category">
+        <h3>Gastos Medicos</h3>
+        <input
+          type="number"
+          id="medicalExpenses"
+          min="0"
+          placeholder="Monto:"
+        />
+        <button onclick="addExpense('medical')">Agregar Gasto</button>
+      </div>
+      <div class="category">
+        <h3>Gastos Domesticos</h3>
+        <input type="number" id="homeExpenses" min="0" placeholder="Monto:" />
+        <button onclick="addExpense('home')">Agregar Gasto</button>
+      </div>
+      <div class="category">
+        <h3>Ocio</h3>
+        <input
+          type="number"
+          id="entertainmentExpenses"
+          min="0"
+          placeholder="Monto:"
+        />
+        <button onclick="addExpense('entertainment')">Agregar Gasto</button>
+      </div>
+      <div class="category">
+        <h3>Ahorro</h3>
+        <input
+          type="number"
+          id="savingsExpenses"
+          min="0"
+          placeholder="Monto:"
+        />
+        <button onclick="addExpense('savings')">Agregar Gasto</button>
+      </div>
+      <div class="category">
+        <h3>Educacion</h3>
+        <input
+          type="number"
+          id="educationExpenses"
+          min="0"
+          placeholder="Monto:"
+        />
+        <button onclick="addExpense('education')">Agregar Gasto</button>
+      </div>
+      <p id="recordedIncome"></p>
+      <p id="totalExpenses">Total de Gastos: $0.00</p>
+      <p id="adviceMessage"></p>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
